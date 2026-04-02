@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GPA Calculator</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- PDF -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+    <!-- Image -->
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+</head>
+
+<body>
+
+<h2 >University GPA Calculator</h2>
+
+<!-- Student Details -->
+<input id="name" placeholder="Student Name">
+<input id="className" placeholder=" Batch Year">
+
+
+<!-- Semester Dropdown -->
+<select id="semester">
+    <option value="">Select Semester</option>
+    <option value="Semester 1">Semester 1.1</option>
+    <option value="Semester 2">Semester 1.2</option>
+    <option value="Semester 3">Semester 2,1</option>
+    <option value="Semester 4">Semester 2.2</option>
+    <option value="Semester 5">Semester 3.1</option>
+    <option value="Semester 6">Semester 3.2</option>
+    <option value="Semester 7">Semester 4.1</option>
+    <option value="Semester 8">Semester 4.2</option>
+</select>
+
+<hr>
+
+<div id="subjects"></div>
+
+<button class="add" onclick="addSubject()">Add Subject</button>
+<button class="calc" onclick="calculateGPA()">Calculate GPA</button>
+
+<hr>
+
+<!-- Result -->
+<div id="resultCard" class="card">
+
+    <h3>Result Sheet</h3>
+
+    <p>Name : <span id="rname"></span></p>
+    <p>Year : <span id="rclass"></span></p>
+    <p>Semester : <span id="rsem"></span></p>
+    <p>GPA : <span id="rgpa"></span></p>
+    <p>Degree Class : <span id="rgrade"></span></p>
+    
+
+</div>
+
+<br>
+
+<button class="pdf" onclick="downloadPDF()">Download PDF</button>
+<button class="img" onclick="downloadImage()">Download Image</button>
+<button class="reset" onclick="resetAll()">Reset</button>
+
+<script src="script.js"></script>
+
+</body>
+</html>

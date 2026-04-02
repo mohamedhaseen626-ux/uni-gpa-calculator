@@ -1,0 +1,57 @@
+body{
+    font-family: Arial;
+    text-align:center;
+    background:#29637e;
+}
+
+
+input, select{
+    padding:6px;
+    margin:5px;
+}
+
+button{
+    padding:8px 12px;
+    margin:5px;
+    cursor:pointer;
+}
+.add{
+    background-color:#28a745;
+    color:white;
+}
+
+.calc{
+    background-color:#007bff;
+    color:white;
+}
+
+.reset{
+    background-color:#dc3545;
+    color:white;
+}
+
+.pdf{
+    background-color:#6f42c1;
+    color:white;
+}
+
+.img{
+    background-color:#6f42c1;
+    color:white;
+}
+
+button:hover{
+    opacity:0.8;
+}
+
+.card{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    font-style: italic;
+    text-align: left;
+    background:rgb(241, 192, 56);
+    width:350px;
+    margin:auto;
+    padding:20px;
+    border-radius:10px;
+}
