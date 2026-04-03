@@ -97,6 +97,11 @@ function getClass(gpa){
     if(gpa>=2.00) return "Pass";
     return "Fail";
 }
+let gpaText = document.getElementById("rgpa");
+
+if(gpa >= 3.7) gpaText.style.color = "green";
+else if(gpa >= 3.0) gpaText.style.color = "orange";
+else gpaText.style.color = "red";
 
 
 /* IMAGE DOWNLOAD */
