@@ -36,18 +36,30 @@ function addSubject(){
 
 function calculateGPA(){
 
-    let totalPoints = 0;
+        let totalPoints = 0;
     let totalCredits = 0;
+    let table = "";
 
     for(let i=1;i<=count;i++){
 
-        let gp = Number(document.getElementById("g"+i).value);
-        let c = Number(document.getElementById("c"+i).value);
+        let name = document.getElementById("s"+i)?.value;
+        let gradeSelect = document.getElementById("g"+i);
+        let gradeText = gradeSelect?.selectedOptions[0].text;
+        let gp = Number(gradeSelect?.value);
+        let c = Number(document.getElementById("c"+i)?.value);
 
-        if(!c || c<=0) continue;
+        if(!c || c<=0 || name==="") continue;
 
         totalPoints += gp * c;
         totalCredits += c;
+
+        // 👉 TABLE ROW ADD
+        table += `
+        <tr>
+            <td>${name}</td>
+            <td>${gradeText}</td>
+            <td>${c}</td>
+        </tr>`;
     }
 
     if(totalCredits === 0){
@@ -58,18 +70,23 @@ function calculateGPA(){
     let gpa = (totalPoints/totalCredits).toFixed(2);
     let grade = getClass(Number(gpa));
 
+    // 👉 RESULT UPDATE
+    document.getElementById("resultSubjects").innerHTML = table;
+
     document.getElementById("rname").innerText =
         document.getElementById("name").value;
 
     document.getElementById("rclass").innerText =
         document.getElementById("className").value;
 
+    document.getElementById("rsem").innerText =
+        document.getElementById("semester").value;
+
     document.getElementById("rgpa").innerText = gpa;
     document.getElementById("rgrade").innerText = grade;
-
-    document.getElementById("rsem").innerText =
-    document.getElementById("semester").value;
 }
+      
+
 
 
 function getClass(gpa){
