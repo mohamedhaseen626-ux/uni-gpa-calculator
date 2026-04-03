@@ -147,6 +147,7 @@ function resetAll(){
     document.getElementById("className").value = "";
     document.getElementById("semester").value = "";
     document.getElementById("rsem").innerText = "";
+   document.getElementById("resultSubjects").innerHTML = "";
 
     // Clear result
     document.getElementById("rname").innerText = "";
