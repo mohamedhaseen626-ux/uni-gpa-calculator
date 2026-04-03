@@ -55,3 +55,17 @@ button:hover{
     padding:20px;
     border-radius:10px;
 }
+table{
+    border-collapse: collapse;
+    margin-top:10px;
+}
+
+th{
+    background:#007bff;
+    color:white;
+}
+
+td, th{
+    padding:6px;
+    text-align:center;
+}
